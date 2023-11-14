@@ -8,17 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933D2B037ABF0049A024 /* BitTrustApp.swift */; };
-		61AA93402B037ABF0049A024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933F2B037ABF0049A024 /* ContentView.swift */; };
+		61AA93402B037ABF0049A024 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933F2B037ABF0049A024 /* MainView.swift */; };
 		61AA93422B037AC00049A024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AA93412B037AC00049A024 /* Assets.xcassets */; };
 		61AA93452B037AC00049A024 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AA93442B037AC00049A024 /* Preview Assets.xcassets */; };
+		61AA93542B037BDE0049A024 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93532B037BDE0049A024 /* NewsItem.swift */; };
+		61AA93562B037BEF0049A024 /* GasItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93552B037BEF0049A024 /* GasItem.swift */; };
+		61AA935C2B037CA30049A024 /* GasSquareItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA935B2B037CA30049A024 /* GasSquareItem.swift */; };
+		61AA935E2B0383450049A024 /* GasRectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA935D2B0383450049A024 /* GasRectItem.swift */; };
+		61AA93602B038F910049A024 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA935F2B038F910049A024 /* NewsRow.swift */; };
+		61AA93632B03B4140049A024 /* MainGasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93622B03B4140049A024 /* MainGasView.swift */; };
+		61AA93652B03B95D0049A024 /* RequestGasInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93642B03B95D0049A024 /* RequestGasInfoViewModel.swift */; };
+		61AA93852B03BF040049A024 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93842B03BF040049A024 /* TabBarItem.swift */; };
+		61AA93872B03E0AB0049A024 /* CoinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93862B03E0AB0049A024 /* CoinItem.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		61AA93822B03BA030049A024 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		61AA933A2B037ABF0049A024 /* BitTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AA933D2B037ABF0049A024 /* BitTrustApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTrustApp.swift; sourceTree = "<group>"; };
-		61AA933F2B037ABF0049A024 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		61AA933F2B037ABF0049A024 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		61AA93412B037AC00049A024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61AA93442B037AC00049A024 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		61AA93532B037BDE0049A024 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		61AA93552B037BEF0049A024 /* GasItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasItem.swift; sourceTree = "<group>"; };
+		61AA935B2B037CA30049A024 /* GasSquareItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasSquareItem.swift; sourceTree = "<group>"; };
+		61AA935D2B0383450049A024 /* GasRectItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasRectItem.swift; sourceTree = "<group>"; };
+		61AA935F2B038F910049A024 /* NewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRow.swift; sourceTree = "<group>"; };
+		61AA93622B03B4140049A024 /* MainGasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGasView.swift; sourceTree = "<group>"; };
+		61AA93642B03B95D0049A024 /* RequestGasInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGasInfoViewModel.swift; sourceTree = "<group>"; };
+		61AA936E2B03BA020049A024 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		61AA93842B03BF040049A024 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		61AA93862B03E0AB0049A024 /* CoinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				61AA933C2B037ABF0049A024 /* BitTrust */,
+				61AA936B2B03BA020049A024 /* Frameworks */,
 				61AA933B2B037ABF0049A024 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,8 +84,10 @@
 		61AA933C2B037ABF0049A024 /* BitTrust */ = {
 			isa = PBXGroup;
 			children = (
+				61AA934B2B037AF80049A024 /* Model */,
+				61AA934C2B037B020049A024 /* View */,
+				61AA934D2B037B090049A024 /* View Model */,
 				61AA933D2B037ABF0049A024 /* BitTrustApp.swift */,
-				61AA933F2B037ABF0049A024 /* ContentView.swift */,
 				61AA93412B037AC00049A024 /* Assets.xcassets */,
 				61AA93432B037AC00049A024 /* Preview Content */,
 			);
@@ -67,6 +102,101 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		61AA934B2B037AF80049A024 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61AA93532B037BDE0049A024 /* NewsItem.swift */,
+				61AA93552B037BEF0049A024 /* GasItem.swift */,
+				61AA93862B03E0AB0049A024 /* CoinItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61AA934C2B037B020049A024 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61AA93832B03BEE50049A024 /* TabBar */,
+				61AA93502B037B490049A024 /* NewsFeed */,
+				61AA935A2B037C340049A024 /* GasViews */,
+				61AA933F2B037ABF0049A024 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61AA934D2B037B090049A024 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				61AA93592B037C120049A024 /* MetamaskSDK */,
+				61AA93582B037C080049A024 /* GetNewsItems */,
+				61AA93572B037BFD0049A024 /* GetGasInfo */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		61AA934E2B037B270049A024 /* GasItems */ = {
+			isa = PBXGroup;
+			children = (
+				61AA935B2B037CA30049A024 /* GasSquareItem.swift */,
+				61AA935D2B0383450049A024 /* GasRectItem.swift */,
+			);
+			path = GasItems;
+			sourceTree = "<group>";
+		};
+		61AA93502B037B490049A024 /* NewsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				61AA935F2B038F910049A024 /* NewsRow.swift */,
+			);
+			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		61AA93572B037BFD0049A024 /* GetGasInfo */ = {
+			isa = PBXGroup;
+			children = (
+				61AA93642B03B95D0049A024 /* RequestGasInfoViewModel.swift */,
+			);
+			path = GetGasInfo;
+			sourceTree = "<group>";
+		};
+		61AA93582B037C080049A024 /* GetNewsItems */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GetNewsItems;
+			sourceTree = "<group>";
+		};
+		61AA93592B037C120049A024 /* MetamaskSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MetamaskSDK;
+			sourceTree = "<group>";
+		};
+		61AA935A2B037C340049A024 /* GasViews */ = {
+			isa = PBXGroup;
+			children = (
+				61AA934E2B037B270049A024 /* GasItems */,
+				61AA93622B03B4140049A024 /* MainGasView.swift */,
+			);
+			path = GasViews;
+			sourceTree = "<group>";
+		};
+		61AA936B2B03BA020049A024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61AA936E2B03BA020049A024 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61AA93832B03BEE50049A024 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				61AA93842B03BF040049A024 /* TabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +207,7 @@
 				61AA93362B037ABF0049A024 /* Sources */,
 				61AA93372B037ABF0049A024 /* Frameworks */,
 				61AA93382B037ABF0049A024 /* Resources */,
+				61AA93822B03BA030049A024 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -137,8 +268,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61AA93402B037ABF0049A024 /* ContentView.swift in Sources */,
+				61AA935E2B0383450049A024 /* GasRectItem.swift in Sources */,
+				61AA93872B03E0AB0049A024 /* CoinItem.swift in Sources */,
+				61AA935C2B037CA30049A024 /* GasSquareItem.swift in Sources */,
+				61AA93852B03BF040049A024 /* TabBarItem.swift in Sources */,
+				61AA93402B037ABF0049A024 /* MainView.swift in Sources */,
+				61AA93652B03B95D0049A024 /* RequestGasInfoViewModel.swift in Sources */,
+				61AA93542B037BDE0049A024 /* NewsItem.swift in Sources */,
+				61AA93562B037BEF0049A024 /* GasItem.swift in Sources */,
+				61AA93602B038F910049A024 /* NewsRow.swift in Sources */,
 				61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */,
+				61AA93632B03B4140049A024 /* MainGasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +427,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Artiom-Porcescu.BitTrust";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,9 +459,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Artiom-Porcescu.BitTrust";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

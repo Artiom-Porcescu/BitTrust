@@ -11,7 +11,8 @@ import SwiftUI
 struct BitTrustApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .preferredColorScheme(.light)
         }
     }
 }

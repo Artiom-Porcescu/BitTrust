@@ -8,22 +8,31 @@
 import SwiftUI
 
 struct GasSquareItem: View {
+    
+    var color: GasLevel
+    var gwei: String
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                    .fill(Color.white)
+                .fill(Color(color.rawValue))
                     .frame(width: 150, height: 150)
-            VStack {
-                Text("36 GWEI")
-                Text("High")
-            }
-            .font(.custom("Futura", size: 25))
-            .foregroundColor(.black)
+                    .overlay {
+                        VStack {
+                            Text("\(gwei) GWEI")
+                                .padding()
+                            Text(color.rawValue)
+                        }
+                        .font(.custom("Futura", size: 20))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    }
+                    
         }
-        .shadow(color: Color(GasLevel.low.rawValue), radius: 25)
+        
     }
 }
 
 #Preview {
-    GasSquareItem()
+    GasSquareItem(color: .low, gwei: "35")
 }

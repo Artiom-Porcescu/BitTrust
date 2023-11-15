@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 final class RequestGasInfoViewModel: ObservableObject {
     
@@ -37,7 +36,9 @@ final class RequestGasInfoViewModel: ObservableObject {
             }
             
             guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
+            //print("Gas json object: \(json)")
             guard let result = json["result"] as? [String: Any] else { return }
+            //print("Reuslt gas: \(result)")
             
             DispatchQueue.main.async {
                 self.lowGas = result["SafeGasPrice"] as! String

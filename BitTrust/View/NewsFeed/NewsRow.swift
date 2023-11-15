@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct NewsRow: View {
+    
+    var newsTitle: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "newspaper.fill")
+                .foregroundColor(.black)
+                .font(.title)
+        }
     }
 }
 
 #Preview {
-    NewsRow()
+    NewsRow(newsTitle: "New Title")
 }

@@ -18,7 +18,7 @@ struct MainView: View {
             }
             
             // News tab
-            Text("News Content") // Replace with actual content for the news tab
+            NewsView() // Replace with actual content for the news tab
                 .tabItem {
                     Image(systemName: "newspaper.fill") // Icon for the news tab
                     Text("News")

@@ -18,29 +18,30 @@ struct MainView: View {
             }
             
             // News tab
-            NewsView() // Replace with actual content for the news tab
+            NewsView()
                 .tabItem {
-                    Image(systemName: "newspaper.fill") // Icon for the news tab
+                    Image(systemName: "newspaper.fill")
                     Text("News")
                 }
             
             // Quotes tab
-            Text("Quotes Content") // Replace with actual content for the quotes tab
+            SearchBarView()
                 .tabItem {
-                    Image(systemName: "chart.bar.xaxis") // Icon for the quotes tab
+                    Image(systemName: "chart.bar.xaxis")
                     Text("Quotes")
                 }
             
-            Text("Alarms") // Replace with actual content for the settings tab
+            // Alarms tab
+            Text("Alarms")
                 .tabItem {
-                    Image(systemName: "bell") // Icon for the settings tab
+                    Image(systemName: "bell")
                     Text("Alarms")
                 }
             
             // Settings tab
-            Text("Settings Content") // Replace with actual content for the settings tab
+            SettingsView()
                 .tabItem {
-                    Image(systemName: "gearshape.fill") // Icon for the settings tab
+                    Image(systemName: "gearshape.fill")
                     Text("Settings")
                 }
         }.tint(GasLevel.low.color)

@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct TextFieldView: View {
+    
+    @State private var name: String = ""
+    @State var viewModel = RequestQuotesViewModel()
+    @State private var isShowingQuoteResult = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TextField("Enter ticker name e.g. BTC then submit", text: $name)
+            .padding()
+            .frame(height: 50)
+            .overlay {
+                RoundedRectangle(cornerRadius: 25).stroke(Color.green, lineWidth: 2)
+            }.padding()
+            .onSubmit {
+                TapticFeedback.triggerHapticFeedback()
+                viewModel.fetchQuotes(for: name.capitalized) {
+                    withAnimation {
+                        self.isShowingQuoteResult = true
+                    }
+                }
+            }
+        
+        if isShowingQuoteResult {
+            QuoteResultRectView(ticker: viewModel.ticker, price: viewModel.price)
+                .transition(.scale)
+        }
     }
 }
 

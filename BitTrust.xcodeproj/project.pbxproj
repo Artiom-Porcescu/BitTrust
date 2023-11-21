@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61323BF72B0B4C5E00D5BB47 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323BF62B0B4C5E00D5BB47 /* EmailView.swift */; };
+		61323BF92B0B4CBB00D5BB47 /* PhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323BF82B0B4CBB00D5BB47 /* PhoneView.swift */; };
+		61323BFB2B0B4D0B00D5BB47 /* GithubAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323BFA2B0B4D0B00D5BB47 /* GithubAccountView.swift */; };
+		61323BFD2B0B4D7F00D5BB47 /* GithubProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323BFC2B0B4D7F00D5BB47 /* GithubProjectView.swift */; };
+		61323BFF2B0B4DCB00D5BB47 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323BFE2B0B4DCB00D5BB47 /* ShareView.swift */; };
+		61323C012B0B4E6D00D5BB47 /* AppVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C002B0B4E6D00D5BB47 /* AppVersionView.swift */; };
+		61323C032B0B4ED100D5BB47 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C022B0B4ED100D5BB47 /* AddressView.swift */; };
+		61323C062B0B6E1C00D5BB47 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C052B0B6E1C00D5BB47 /* TextFieldView.swift */; };
+		61323C082B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C072B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift */; };
+		61323C0A2B0CC31300D5BB47 /* GasTimestampItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */; };
+		61323C0D2B0CCF5D00D5BB47 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 61323C0C2B0CCF5D00D5BB47 /* SwiftUICharts */; };
 		61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933D2B037ABF0049A024 /* BitTrustApp.swift */; };
 		61AA93402B037ABF0049A024 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933F2B037ABF0049A024 /* MainView.swift */; };
 		61AA93422B037AC00049A024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AA93412B037AC00049A024 /* Assets.xcassets */; };
@@ -22,6 +33,14 @@
 		61AA93872B03E0AB0049A024 /* CoinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93862B03E0AB0049A024 /* CoinItem.swift */; };
 		61AA938C2B03F9980049A024 /* RequestNewsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA938B2B03F9980049A024 /* RequestNewsItemViewModel.swift */; };
 		61AA938E2B03FA880049A024 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA938D2B03FA880049A024 /* NewsView.swift */; };
+		61AA93912B04C43D0049A024 /* Marquee in Frameworks */ = {isa = PBXBuildFile; productRef = 61AA93902B04C43D0049A024 /* Marquee */; };
+		61AA93942B04CB040049A024 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93932B04CB040049A024 /* SafariView.swift */; };
+		61AA939A2B0533FB0049A024 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93992B0533FB0049A024 /* SearchBarView.swift */; };
+		61AA939C2B0534160049A024 /* QuoteResultRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA939B2B0534160049A024 /* QuoteResultRectView.swift */; };
+		61AA939E2B053DCA0049A024 /* EmptyQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA939D2B053DCA0049A024 /* EmptyQuotesView.swift */; };
+		61AA93A12B0612720049A024 /* RequestQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93A02B0612720049A024 /* RequestQuotesViewModel.swift */; };
+		61AA93D92B06713D0049A024 /* TapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93D82B06713D0049A024 /* TapticFeedback.swift */; };
+		61AA93DB2B078D830049A024 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93DA2B078D830049A024 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +57,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		61323BF62B0B4C5E00D5BB47 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		61323BF82B0B4CBB00D5BB47 /* PhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneView.swift; sourceTree = "<group>"; };
+		61323BFA2B0B4D0B00D5BB47 /* GithubAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAccountView.swift; sourceTree = "<group>"; };
+		61323BFC2B0B4D7F00D5BB47 /* GithubProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProjectView.swift; sourceTree = "<group>"; };
+		61323BFE2B0B4DCB00D5BB47 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		61323C002B0B4E6D00D5BB47 /* AppVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionView.swift; sourceTree = "<group>"; };
+		61323C022B0B4ED100D5BB47 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		61323C052B0B6E1C00D5BB47 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		61323C072B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGasHistoryViewModel.swift; sourceTree = "<group>"; };
+		61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTimestampItem.swift; sourceTree = "<group>"; };
 		61AA933A2B037ABF0049A024 /* BitTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AA933D2B037ABF0049A024 /* BitTrustApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTrustApp.swift; sourceTree = "<group>"; };
 		61AA933F2B037ABF0049A024 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -55,6 +84,13 @@
 		61AA93862B03E0AB0049A024 /* CoinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItem.swift; sourceTree = "<group>"; };
 		61AA938B2B03F9980049A024 /* RequestNewsItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNewsItemViewModel.swift; sourceTree = "<group>"; };
 		61AA938D2B03FA880049A024 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		61AA93932B04CB040049A024 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		61AA93992B0533FB0049A024 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		61AA939B2B0534160049A024 /* QuoteResultRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResultRectView.swift; sourceTree = "<group>"; };
+		61AA939D2B053DCA0049A024 /* EmptyQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyQuotesView.swift; sourceTree = "<group>"; };
+		61AA93A02B0612720049A024 /* RequestQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestQuotesViewModel.swift; sourceTree = "<group>"; };
+		61AA93D82B06713D0049A024 /* TapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticFeedback.swift; sourceTree = "<group>"; };
+		61AA93DA2B078D830049A024 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +98,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AA93912B04C43D0049A024 /* Marquee in Frameworks */,
+				61323C0D2B0CCF5D00D5BB47 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61323BF32B0B4B1F00D5BB47 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				61323BF52B0B4B3600D5BB47 /* AboutSection */,
+				61323BF42B0B4B2D00D5BB47 /* SupportDevSection */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		61323BF42B0B4B2D00D5BB47 /* SupportDevSection */ = {
+			isa = PBXGroup;
+			children = (
+				61323C022B0B4ED100D5BB47 /* AddressView.swift */,
+			);
+			path = SupportDevSection;
+			sourceTree = "<group>";
+		};
+		61323BF52B0B4B3600D5BB47 /* AboutSection */ = {
+			isa = PBXGroup;
+			children = (
+				61323BF62B0B4C5E00D5BB47 /* EmailView.swift */,
+				61323BF82B0B4CBB00D5BB47 /* PhoneView.swift */,
+				61323BFA2B0B4D0B00D5BB47 /* GithubAccountView.swift */,
+				61323BFC2B0B4D7F00D5BB47 /* GithubProjectView.swift */,
+				61323BFE2B0B4DCB00D5BB47 /* ShareView.swift */,
+				61323C002B0B4E6D00D5BB47 /* AppVersionView.swift */,
+			);
+			path = AboutSection;
+			sourceTree = "<group>";
+		};
+		61323C042B0B6E0800D5BB47 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				61AA939D2B053DCA0049A024 /* EmptyQuotesView.swift */,
+				61323C052B0B6E1C00D5BB47 /* TextFieldView.swift */,
+				61AA939B2B0534160049A024 /* QuoteResultRectView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		61AA93312B037ABF0049A024 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +190,7 @@
 				61AA93532B037BDE0049A024 /* NewsItem.swift */,
 				61AA93552B037BEF0049A024 /* GasItem.swift */,
 				61AA93862B03E0AB0049A024 /* CoinItem.swift */,
+				61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,9 +212,12 @@
 		61AA934D2B037B090049A024 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				61AA93922B04CAF70049A024 /* Safari */,
 				61AA93592B037C120049A024 /* MetamaskSDK */,
 				61AA93582B037C080049A024 /* GetNewsItems */,
+				61AA939F2B0612400049A024 /* GetQuotes */,
 				61AA93572B037BFD0049A024 /* GetGasInfo */,
+				61AA93D82B06713D0049A024 /* TapticFeedback.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -162,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				61AA93642B03B95D0049A024 /* RequestGasInfoViewModel.swift */,
+				61323C072B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift */,
 			);
 			path = GetGasInfo;
 			sourceTree = "<group>";
@@ -209,6 +292,8 @@
 		61AA93882B03F72B0049A024 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				61323BF32B0B4B1F00D5BB47 /* Components */,
+				61AA93DA2B078D830049A024 /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -223,8 +308,26 @@
 		61AA938A2B03F7530049A024 /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				61323C042B0B6E0800D5BB47 /* Components */,
+				61AA93992B0533FB0049A024 /* SearchBarView.swift */,
 			);
 			path = Quotes;
+			sourceTree = "<group>";
+		};
+		61AA93922B04CAF70049A024 /* Safari */ = {
+			isa = PBXGroup;
+			children = (
+				61AA93932B04CB040049A024 /* SafariView.swift */,
+			);
+			path = Safari;
+			sourceTree = "<group>";
+		};
+		61AA939F2B0612400049A024 /* GetQuotes */ = {
+			isa = PBXGroup;
+			children = (
+				61AA93A02B0612720049A024 /* RequestQuotesViewModel.swift */,
+			);
+			path = GetQuotes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +347,10 @@
 			dependencies = (
 			);
 			name = BitTrust;
+			packageProductDependencies = (
+				61AA93902B04C43D0049A024 /* Marquee */,
+				61323C0C2B0CCF5D00D5BB47 /* SwiftUICharts */,
+			);
 			productName = BitTrust;
 			productReference = 61AA933A2B037ABF0049A024 /* BitTrust.app */;
 			productType = "com.apple.product-type.application";
@@ -272,6 +379,10 @@
 				Base,
 			);
 			mainGroup = 61AA93312B037ABF0049A024;
+			packageReferences = (
+				61AA938F2B04C43D0049A024 /* XCRemoteSwiftPackageReference "Marquee" */,
+				61323C0B2B0CCF5D00D5BB47 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 61AA933B2B037ABF0049A024 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,16 +412,33 @@
 				61AA935E2B0383450049A024 /* GasRectItem.swift in Sources */,
 				61AA93872B03E0AB0049A024 /* CoinItem.swift in Sources */,
 				61AA935C2B037CA30049A024 /* GasSquareItem.swift in Sources */,
+				61AA93A12B0612720049A024 /* RequestQuotesViewModel.swift in Sources */,
 				61AA93852B03BF040049A024 /* TabBarItem.swift in Sources */,
+				61323C0A2B0CC31300D5BB47 /* GasTimestampItem.swift in Sources */,
 				61AA93402B037ABF0049A024 /* MainView.swift in Sources */,
 				61AA93652B03B95D0049A024 /* RequestGasInfoViewModel.swift in Sources */,
+				61323BFD2B0B4D7F00D5BB47 /* GithubProjectView.swift in Sources */,
+				61AA93942B04CB040049A024 /* SafariView.swift in Sources */,
+				61AA93DB2B078D830049A024 /* SettingsView.swift in Sources */,
 				61AA938C2B03F9980049A024 /* RequestNewsItemViewModel.swift in Sources */,
 				61AA938E2B03FA880049A024 /* NewsView.swift in Sources */,
 				61AA93542B037BDE0049A024 /* NewsItem.swift in Sources */,
+				61AA93D92B06713D0049A024 /* TapticFeedback.swift in Sources */,
+				61AA939C2B0534160049A024 /* QuoteResultRectView.swift in Sources */,
+				61323C012B0B4E6D00D5BB47 /* AppVersionView.swift in Sources */,
+				61AA939E2B053DCA0049A024 /* EmptyQuotesView.swift in Sources */,
+				61AA939A2B0533FB0049A024 /* SearchBarView.swift in Sources */,
 				61AA93562B037BEF0049A024 /* GasItem.swift in Sources */,
+				61323BF72B0B4C5E00D5BB47 /* EmailView.swift in Sources */,
 				61AA93602B038F910049A024 /* NewsRow.swift in Sources */,
+				61323BFF2B0B4DCB00D5BB47 /* ShareView.swift in Sources */,
+				61323C062B0B6E1C00D5BB47 /* TextFieldView.swift in Sources */,
+				61323C082B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift in Sources */,
 				61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */,
+				61323C032B0B4ED100D5BB47 /* AddressView.swift in Sources */,
+				61323BFB2B0B4D0B00D5BB47 /* GithubAccountView.swift in Sources */,
 				61AA93632B03B4140049A024 /* MainGasView.swift in Sources */,
+				61323BF92B0B4CBB00D5BB47 /* PhoneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +650,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		61323C0B2B0CCF5D00D5BB47 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+		61AA938F2B04C43D0049A024 /* XCRemoteSwiftPackageReference "Marquee" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIKit/Marquee";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		61323C0C2B0CCF5D00D5BB47 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61323C0B2B0CCF5D00D5BB47 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		61AA93902B04C43D0049A024 /* Marquee */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61AA938F2B04C43D0049A024 /* XCRemoteSwiftPackageReference "Marquee" */;
+			productName = Marquee;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 61AA93322B037ABF0049A024 /* Project object */;
 }

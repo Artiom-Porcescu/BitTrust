@@ -27,6 +27,7 @@ struct GasSquareItem: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                     }
+                    .shadow(color: .gray, radius: 10) 
                     
         }
         

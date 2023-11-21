@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct GasTimestampItem {
+    var timestamp: String
+    var gasPrice: Int
+}

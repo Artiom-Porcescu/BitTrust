@@ -6,41 +6,32 @@
 //
 
 import SwiftUI
-import Charts
+import SwiftUICharts
 
 struct MainGasView: View {
     
-    @StateObject var viewModel = RequestGasInfoViewModel()
+    @StateObject var gasLevelsViewModel = RequestGasInfoViewModel()
+    @StateObject var gasHistoryViewModel = RequestGasHistoryViewModel()
     
-    var data: [ToyShape] = [
-        .init(type: "Cube", count: 5),
-        .init(type: "Sphere", count: 4),
-        .init(type: "Pyramid", count: 4),
-        .init(type: "Pyramid2", count: 4),
-        .init(type: "Pyramid3", count: 4),
-        .init(type: "Pyramid4", count: 4),
-        .init(type: "Pyramid5", count: 4),
-        .init(type: "Pyramid6", count: 4)
-    ]
+    var chartData: [(String, Double)] {
+        var data: [(String, Double)] = []
+        for item in gasHistoryViewModel.gasHistory.reversed() {
+            data.append( (item.timestamp, Double(item.gasPrice)) )
+        }
+        return data
+    }
     
     var body: some View {
         VStack {
             HStack() {
-                GasSquareItem(color: .high, gwei: viewModel.highGas)
+                GasSquareItem(color: .high, gwei: gasLevelsViewModel.highGas)
                 Spacer()
-                GasSquareItem(color: .average, gwei: viewModel.averageGas)
+                GasSquareItem(color: .average, gwei: gasLevelsViewModel.averageGas)
             }
             .padding()
-            GasRectItem(gasLevel: .low, gwei: viewModel.lowGas)
+            GasRectItem(gasLevel: .low, gwei: gasLevelsViewModel.lowGas)
             
-            Chart {
-                ForEach(data.indices, id: \.self) { index in
-                    BarMark(
-                        x: .value("Shape Type", data[index].type),
-                        y: .value("Total Count", data[index].count)
-                    )
-                }
-            }
+            BarChartView(data: ChartData(values: chartData), title: "Gas History - Gwei", form: ChartForm.extraLarge)
         }
     }
 }

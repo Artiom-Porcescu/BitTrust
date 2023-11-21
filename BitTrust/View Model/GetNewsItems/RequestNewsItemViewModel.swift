@@ -16,9 +16,16 @@ final class RequestNewsItemViewModel: ObservableObject {
     
     init() {
         fetchNews()
+        timer = Timer.scheduledTimer(withTimeInterval: 300.0, repeats: true) { [weak self] _ in
+            self?.fetchNews()
+        }
     }
     
     func fetchNews() {
+        
+        titles = []
+        newsURLs = []
+        
         let urlString = "https://cryptopanic.com/api/v1/posts/?auth_token=b47ebdd1b4464aa269f2c28991aa959038486c8e"
         guard let url = URL(string: urlString) else {
             print("Error while setting URL string")
@@ -31,7 +38,6 @@ final class RequestNewsItemViewModel: ObservableObject {
                 print("Error while getting data for URL session")
                 return
             }
-            print("New data: \(data)")
             
             guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
             guard let res = json["results"] as? [[String: Any]] else { return }
@@ -40,9 +46,6 @@ final class RequestNewsItemViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.titles.append(elem["title"] as! String)
                     self.newsURLs.append(elem["url"] as! String)
-                    print("titles Array: \(self.titles)")
-                    print("newsURL array: \(self.newsURLs)")
-                    print("\n\n\n\n\n\n\n\n")
                 }
             }
             

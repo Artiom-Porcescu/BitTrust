@@ -10,11 +10,34 @@ import SwiftUI
 struct NewsView: View {
     
     @StateObject var viewModel = RequestNewsItemViewModel()
-    
+    @State private var isShowingSafariView = false
+    @State private var selectedIndex: Int? 
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(viewModel.titles.indices, id: \.self) { index in
+                    NewsRow(newsTitle: viewModel.titles[index]).onTapGesture {
+                            TapticFeedback.triggerHapticFeedback()
+                            self.selectedIndex = index
+                            self.isShowingSafariView = true
+                        }
+                }
+            }
+            .listStyle(PlainListStyle())
+            .navigationBarTitle("News", displayMode: .large)
+            .fullScreenCover(isPresented: $isShowingSafariView) {
+                if let selectedIndex = selectedIndex, viewModel.newsURLs.indices.contains(selectedIndex) {
+                    SafariView(url: URL(string: viewModel.newsURLs[selectedIndex]) ?? URL(string: "https://cryptopanic.com/")!)
+                } else {
+                    // Handle the error or show a default URL
+                    SafariView(url: URL(string: "https://cryptopanic.com/")!)
+                }
+            }
+        }
     }
 }
+
 
 #Preview {
     NewsView()

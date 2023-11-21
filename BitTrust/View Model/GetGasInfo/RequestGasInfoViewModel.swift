@@ -16,6 +16,7 @@ final class RequestGasInfoViewModel: ObservableObject {
     private var timer: Timer?
     
     init() {
+        fetchGas()
         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
             self?.fetchGas()
         }

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+struct TapticFeedback {
+    static func triggerHapticFeedback() {
+        let generator = UIImpactFeedbackGenerator(style: .rigid)
+        generator.impactOccurred()
+    }
+}

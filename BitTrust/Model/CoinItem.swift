@@ -14,9 +14,3 @@ enum CoinItem: String, CaseIterable {
     case optimism
     case solana
 }
-
-struct ToyShape: Identifiable {
-    var type: String
-    var count: Double
-    var id = UUID()
-}

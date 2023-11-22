@@ -26,6 +26,7 @@ struct NewsView: View {
             }
             .refreshable {
                 viewModel.fetchNews()
+                TapticFeedback.triggerHapticFeedback()
             }
             .listStyle(PlainListStyle())
             .navigationBarTitle("News", displayMode: .large)

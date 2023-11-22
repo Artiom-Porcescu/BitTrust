@@ -9,8 +9,7 @@ import Foundation
 
 final class RequestQuotesViewModel {
     
-    @Published var price: Double = 0.0
-    @Published var ticker: String = ""
+    @Published var quote: QuoteItem = QuoteItem(ticker: "BTC", price: 27000.8)
     
     func fetchQuotes(for ticker: String, completion: @escaping () -> Void) {
         let urlString = "https://rest.coinapi.io/v1/exchangerate/\(ticker)/USD?apikey=313C55BD-312F-4CAE-A62A-C4C595216AFF"
@@ -30,9 +29,11 @@ final class RequestQuotesViewModel {
             print("Quote json object: \(json)")
             
             DispatchQueue.main.async {
-                self.ticker = json["asset_id_base"] as! String
-                self.price = json["rate"] as! Double
-                completion()
+                if let ticker = json["asset_id_base"] as? String, let price = json["rate"] as? Double {
+                    self.quote = QuoteItem(ticker: ticker, price: price)
+                    completion()
+                }
+                
             }
             
         }.resume()

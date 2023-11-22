@@ -28,7 +28,6 @@ struct GasRectItem: View {
                         .foregroundColor(.white)
                     }
                     .padding()
-                    .shadow(color: .gray, radius: 10)  
         }
     }
 }

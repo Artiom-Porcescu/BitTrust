@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct QuoteItem {
+    var ticker: String
+    var price: Double
+}

@@ -9,8 +9,8 @@ import Foundation
 
 final class RequestNewsItemViewModel: ObservableObject {
     
-    @Published var titles: [String] = []
-    @Published var newsURLs: [String] = []
+    @Published var news: [NewsItem] = []
+    
     
     private var timer: Timer?
     
@@ -23,8 +23,7 @@ final class RequestNewsItemViewModel: ObservableObject {
     
     func fetchNews() {
         
-        titles = []
-        newsURLs = []
+        news = []
         
         let urlString = "https://cryptopanic.com/api/v1/posts/?auth_token=b47ebdd1b4464aa269f2c28991aa959038486c8e"
         guard let url = URL(string: urlString) else {
@@ -44,13 +43,23 @@ final class RequestNewsItemViewModel: ObservableObject {
             
             for elem in res {
                 DispatchQueue.main.async {
-                    self.titles.append(elem["title"] as! String)
-                    self.newsURLs.append(elem["url"] as! String)
+                    if let title = elem["title"] as? String, let newsURL = elem["url"] as? String {
+                        
+                        var currencies: [String] = []
+                        
+                        if let currenciesCodes = elem["currencies"] as? [[String: Any]] {
+                            for currency in currenciesCodes {
+                                if let currencyCode = currency["code"] as? String {
+                                    currencies.append(currencyCode)
+                                }
+                            }
+                        } 
+                        
+                        
+                        self.news.append(NewsItem(title: title, newsURL: newsURL, currencies: currencies))
+                    }
                 }
             }
-            
-            
-            
         }.resume()
     }
     

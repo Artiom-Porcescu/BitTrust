@@ -10,8 +10,16 @@ import SwiftUI
 struct NewsRow: View {
     
     var newsTitle: String
-    //var currencies: [String] later on add the logic to get currecnies from array
+    var currencies: [String]
     @State private var animate = false
+    
+    var currenciesString: String {
+        var res = "Currencies:"
+        for currency in currencies {
+            res += " \(currency) "
+        }
+        return res
+    }
     
     var body: some View {
         VStack {
@@ -23,7 +31,10 @@ struct NewsRow: View {
                 VStack(alignment: .leading) {
                         Text(newsTitle)
                         .fontWeight(.bold)
-                        Text("Currencies: ")
+                    if !currencies.isEmpty {
+                        Text("\(currenciesString)")
+                    }
+                        
                 }
                 .font(.custom("Futura", size: 15))
                 Spacer()
@@ -34,5 +45,5 @@ struct NewsRow: View {
 }
 
 #Preview {
-    NewsRow(newsTitle: "New Title")
+    NewsRow(newsTitle: "New Title", currencies: ["BTC", "ETH"])
 }

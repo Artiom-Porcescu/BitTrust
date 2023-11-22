@@ -12,6 +12,7 @@ struct MainGasView: View {
     
     @StateObject var gasLevelsViewModel = RequestGasInfoViewModel()
     @StateObject var gasHistoryViewModel = RequestGasHistoryViewModel()
+    private let chartStyle = ChartStyle(backgroundColor: Color.white, accentColor: Color(GasLevel.low.rawValue), gradientColor: GradientColor.init(start: Color.mint, end: Color(GasLevel.low.rawValue)), textColor: Color.black, legendTextColor: Color(GasLevel.low.rawValue), dropShadowColor: Color.white)
     
     var chartData: [(String, Double)] {
         var data: [(String, Double)] = []
@@ -31,7 +32,7 @@ struct MainGasView: View {
             .padding()
             GasRectItem(gasLevel: .low, gwei: gasLevelsViewModel.lowGas)
             
-            BarChartView(data: ChartData(values: chartData), title: "Gas History - Gwei", form: ChartForm.extraLarge)
+            BarChartView(data: ChartData(values: chartData), title: "Gas History - Gwei",style: chartStyle, form: ChartForm.extraLarge, dropShadow: false, cornerImage: Image(systemName: "fuelpump.circle.fill"), valueSpecifier: "%.0f Gwei")
         }
     }
 }

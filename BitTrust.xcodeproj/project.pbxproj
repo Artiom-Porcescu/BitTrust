@@ -18,6 +18,7 @@
 		61323C082B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C072B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift */; };
 		61323C0A2B0CC31300D5BB47 /* GasTimestampItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */; };
 		61323C0D2B0CCF5D00D5BB47 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 61323C0C2B0CCF5D00D5BB47 /* SwiftUICharts */; };
+		61323C0F2B0E12CE00D5BB47 /* QuoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C0E2B0E12CE00D5BB47 /* QuoteItem.swift */; };
 		61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933D2B037ABF0049A024 /* BitTrustApp.swift */; };
 		61AA93402B037ABF0049A024 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933F2B037ABF0049A024 /* MainView.swift */; };
 		61AA93422B037AC00049A024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AA93412B037AC00049A024 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		61323C052B0B6E1C00D5BB47 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		61323C072B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGasHistoryViewModel.swift; sourceTree = "<group>"; };
 		61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTimestampItem.swift; sourceTree = "<group>"; };
+		61323C0E2B0E12CE00D5BB47 /* QuoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItem.swift; sourceTree = "<group>"; };
 		61AA933A2B037ABF0049A024 /* BitTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AA933D2B037ABF0049A024 /* BitTrustApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTrustApp.swift; sourceTree = "<group>"; };
 		61AA933F2B037ABF0049A024 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				61AA93552B037BEF0049A024 /* GasItem.swift */,
 				61AA93862B03E0AB0049A024 /* CoinItem.swift */,
 				61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */,
+				61323C0E2B0E12CE00D5BB47 /* QuoteItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				61323C082B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift in Sources */,
 				61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */,
 				61323C032B0B4ED100D5BB47 /* AddressView.swift in Sources */,
+				61323C0F2B0E12CE00D5BB47 /* QuoteItem.swift in Sources */,
 				61323BFB2B0B4D0B00D5BB47 /* GithubAccountView.swift in Sources */,
 				61AA93632B03B4140049A024 /* MainGasView.swift in Sources */,
 				61323BF92B0B4CBB00D5BB47 /* PhoneView.swift in Sources */,

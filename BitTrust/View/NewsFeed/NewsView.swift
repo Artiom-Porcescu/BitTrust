@@ -16,8 +16,8 @@ struct NewsView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.titles.indices, id: \.self) { index in
-                    NewsRow(newsTitle: viewModel.titles[index]).onTapGesture {
+                ForEach(viewModel.news.indices, id: \.self) { index in
+                    NewsRow(newsTitle: viewModel.news[index].title, currencies: viewModel.news[index].currencies).onTapGesture {
                             TapticFeedback.triggerHapticFeedback()
                             self.selectedIndex = index
                             self.isShowingSafariView = true
@@ -27,8 +27,8 @@ struct NewsView: View {
             .listStyle(PlainListStyle())
             .navigationBarTitle("News", displayMode: .large)
             .fullScreenCover(isPresented: $isShowingSafariView) {
-                if let selectedIndex = selectedIndex, viewModel.newsURLs.indices.contains(selectedIndex) {
-                    SafariView(url: URL(string: viewModel.newsURLs[selectedIndex]) ?? URL(string: "https://cryptopanic.com/")!)
+                if let selectedIndex = selectedIndex, viewModel.news.indices.contains(selectedIndex) {
+                    SafariView(url: URL(string: viewModel.news[selectedIndex].newsURL) ?? URL(string: "https://cryptopanic.com/")!)
                 } else {
                     // Handle the error or show a default URL
                     SafariView(url: URL(string: "https://cryptopanic.com/")!)

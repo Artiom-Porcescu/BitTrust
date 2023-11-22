@@ -28,7 +28,7 @@ struct SearchBarView: View {
                     }
                 }
             VStack {
-                TextField("Enter ticker name e.g. BTC then submit", text: $name)
+                TextField("Enter ticker name e.g. BTC -> submit", text: $name)
                     .padding()
                     .frame(height: 50)
                     .overlay {
@@ -44,7 +44,7 @@ struct SearchBarView: View {
                     }
                 
                 if isShowingQuoteResult {
-                    QuoteResultRectView(ticker: viewModel.ticker, price: viewModel.price)
+                    QuoteResultRectView(ticker: viewModel.quote.ticker, price: viewModel.quote.price)
                         .transition(.scale)
                 }
                 Spacer()

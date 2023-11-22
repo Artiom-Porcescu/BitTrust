@@ -30,7 +30,7 @@ struct TextFieldView: View {
             }
         
         if isShowingQuoteResult {
-            QuoteResultRectView(ticker: viewModel.ticker, price: viewModel.price)
+            QuoteResultRectView(ticker: viewModel.quote.ticker, price: viewModel.quote.price)
                 .transition(.scale)
         }
     }

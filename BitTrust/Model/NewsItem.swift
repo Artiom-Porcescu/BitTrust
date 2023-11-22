@@ -10,4 +10,5 @@ import Foundation
 struct NewsItem {
     var title: String
     var newsURL: String
+    var currencies: [String]
 }

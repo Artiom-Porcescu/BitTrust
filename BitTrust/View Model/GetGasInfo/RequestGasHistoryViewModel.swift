@@ -8,6 +8,7 @@
 import Foundation
 
 final class RequestGasHistoryViewModel: ObservableObject {
+    
     @Published var gasHistory: [GasTimestampItem] = []
     
     private var timer: Timer?
@@ -40,7 +41,7 @@ final class RequestGasHistoryViewModel: ObservableObject {
             
             guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
             guard let res = json["candles"] as? [[String: Any]] else { return }
-            print("Gas history json object: \(json)\n\n\n\n")
+//            print("Gas history json object: \(json)\n\n\n\n")
             for time in res {
                 if self.gasHistory.count >= 40 {
                     break
@@ -60,9 +61,9 @@ final class RequestGasHistoryViewModel: ObservableObject {
                         }
                     }
                     
-                    print("PreFormatted string: \(preFormattedDateString)")
-                    print("Gas Price: \(gasPrice)")
-                    print("Timestamp Object: \(timeUnwrapped)\n\n\n\n")
+//                    print("PreFormatted string: \(preFormattedDateString)")
+//                    print("Gas Price: \(gasPrice)")
+//                    print("Timestamp Object: \(timeUnwrapped)\n\n\n\n")
                     
 
                     let dateFormatter = DateFormatter()

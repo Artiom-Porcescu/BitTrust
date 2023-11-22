@@ -24,6 +24,9 @@ struct NewsView: View {
                         }
                 }
             }
+            .refreshable {
+                viewModel.fetchNews()
+            }
             .listStyle(PlainListStyle())
             .navigationBarTitle("News", displayMode: .large)
             .fullScreenCover(isPresented: $isShowingSafariView) {

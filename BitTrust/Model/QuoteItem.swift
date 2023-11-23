@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct QuoteItem {
+struct QuoteItem: Identifiable {
+    let id = UUID()
     var ticker: String
     var price: Double
 }

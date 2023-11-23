@@ -13,6 +13,9 @@ struct QuoteResultRectView: View {
     @State private var animate = false
     var ticker = ""
     var price = 0.0
+    var onAdd: ( ()->Void )?
+    var onDelete: ( ()->Void )?
+    @State var added: Bool
     
     var body: some View {
         ZStack {
@@ -23,13 +26,28 @@ struct QuoteResultRectView: View {
                 Text(ticker)
                 Spacer()
                 Text(String(format: "%.2f", price))
-                Button {
-                    TapticFeedback.triggerHapticFeedback()
-                    animate.toggle()
-                } label: {
-                    Image(systemName: "plus.circle.fill")
-                        .symbolEffect(.bounce, value: animate).font(.title)
+                if added {
+                    Button {
+                        onAdd!()
+                        TapticFeedback.triggerHapticFeedback()
+                        animate.toggle()
+                        added.toggle()
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .symbolEffect(.bounce, value: animate).font(.title)
+                    }
+                } else {
+                    Button {
+                        onDelete!()
+                        TapticFeedback.triggerHapticFeedback()
+                        animate.toggle()
+                        added.toggle()
+                    } label: {
+                        Image(systemName: "minus.circle.fill")
+                            .symbolEffect(.bounce, value: animate).font(.title)
+                    }
                 }
+                
             }.font(.custom("Futura", size: 25))
                 .foregroundColor(.white)
                 .padding()
@@ -38,6 +56,6 @@ struct QuoteResultRectView: View {
     }
 }
 
-#Preview {
-    QuoteResultRectView()
-}
+//#Preview {
+//    QuoteResultRectView()
+//}

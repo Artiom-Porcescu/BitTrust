@@ -11,7 +11,7 @@ struct SearchBarView: View {
     @State private var name: String = ""
     @State private var isShowingQuoteResult = false
     @State var viewModel = RequestQuotesViewModel()
-    @State private var quotes: [QuoteResultRectView] = []
+    @State private var quotes: [QuoteItem] = []
     
     var body: some View {
         ZStack {
@@ -29,6 +29,7 @@ struct SearchBarView: View {
                 }
             VStack {
                 TextField("Enter ticker name e.g. BTC -> submit", text: $name)
+                    .autocorrectionDisabled()
                     .padding()
                     .frame(height: 50)
                     .overlay {
@@ -44,15 +45,39 @@ struct SearchBarView: View {
                     }
                 
                 if isShowingQuoteResult {
-                    QuoteResultRectView(ticker: viewModel.quote.ticker, price: viewModel.quote.price)
-                        .transition(.scale)
+                    QuoteResultRectView(ticker: viewModel.quote.ticker, price: viewModel.quote.price, onAdd: {
+                        self.addItem(QuoteItem(ticker: viewModel.quote.ticker, price: viewModel.quote.price))
+                    }, added: true)
+                    .transition(.scale)
                 }
-                Spacer()
-                EmptyQuotesView()
-                Spacer()
+                
+                if quotes.isEmpty {
+                    Spacer()
+                    EmptyQuotesView()
+                    Spacer()
+                } else {
+                    ScrollView {
+                        ForEach($quotes) { $quote in
+                            QuoteResultRectView(ticker: quote.ticker, price: quote.price, onDelete: {
+                                self.deleteItem(quote)
+                            }, added: false)
+                        }
+                    }
+                    Spacer()
+                }
             }
         }
-        
+    }
+    
+    private func addItem(_ item: QuoteItem) {
+        isShowingQuoteResult = false
+        quotes.append(item)
+    }
+    
+    private func deleteItem(_ item: QuoteItem) {
+        if let index = quotes.firstIndex(where: { $0.id == item.id }) {
+            quotes.remove(at: index)
+        }
     }
 }
 

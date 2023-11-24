@@ -23,7 +23,7 @@ struct GasSquareItem: View {
                                 .padding()
                             Text(color.rawValue)
                         }
-                        .font(.custom("Futura", size: 20))
+                        .font(.custom("Menlo", size: 20))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                     }

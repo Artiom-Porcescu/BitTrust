@@ -22,6 +22,9 @@ struct NewsView: View {
                             self.selectedIndex = index
                             self.isShowingSafariView = true
                         }
+                    .contextMenu(ContextMenu(menuItems: {
+                        ShareLink(item: "\(viewModel.news[index].newsURL)")
+                    }))
                 }
             }
             .refreshable {

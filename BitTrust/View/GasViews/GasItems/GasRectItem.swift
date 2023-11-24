@@ -23,7 +23,7 @@ struct GasRectItem: View {
                                 .padding()
                             Text(gasLevel.rawValue)
                         }
-                        .font(.custom("Futura", size: 20))
+                        .font(.custom("Menlo", size: 20))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                     }

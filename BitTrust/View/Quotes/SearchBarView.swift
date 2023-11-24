@@ -61,11 +61,35 @@ struct SearchBarView: View {
                             QuoteResultRectView(ticker: quote.ticker, price: quote.price, onDelete: {
                                 self.deleteItem(quote)
                             }, added: false)
+                            .contextMenu(ContextMenu(menuItems: {
+                                ShareLink(item: "\(quote.ticker) = $\(String(format: "%.2f", quote.price))")
+                            }))
                         }
                     }
                     Spacer()
                 }
             }
+        }
+        .onAppear {
+            
+            if let savedStrings = UserDefaults.standard.object(forKey: "MyQuotes") as? [String] {
+                for ticker in savedStrings {
+                    viewModel.fetchQuotes(for: ticker) {
+                        self.quotes.append(QuoteItem(ticker: viewModel.quote.ticker, price: viewModel.quote.price))
+                    }
+                }
+                print("Retrieved strings: \(savedStrings)")
+            }
+        }
+        .onDisappear {
+            
+            var quotesToSave: [String] = []
+            for quote in quotes {
+                quotesToSave.append(quote.ticker)
+            }
+            print("Saved on disappear: \(quotesToSave)")
+            UserDefaults.standard.set(quotesToSave, forKey: "MyQuotes")
+            
         }
     }
     

@@ -32,7 +32,7 @@ struct MainView: View {
                 }
             
             // Alarms tab
-            Text("Alarms")
+            AlarmsView()
                 .tabItem {
                     Image(systemName: "bell")
                     Text("Alarms")

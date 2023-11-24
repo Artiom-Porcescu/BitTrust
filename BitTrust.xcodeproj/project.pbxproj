@@ -19,6 +19,8 @@
 		61323C0A2B0CC31300D5BB47 /* GasTimestampItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */; };
 		61323C0D2B0CCF5D00D5BB47 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 61323C0C2B0CCF5D00D5BB47 /* SwiftUICharts */; };
 		61323C0F2B0E12CE00D5BB47 /* QuoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C0E2B0E12CE00D5BB47 /* QuoteItem.swift */; };
+		613FEF112B0FB0CD00828A8D /* AlarmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613FEF102B0FB0CD00828A8D /* AlarmsView.swift */; };
+		613FEF132B0FC5F600828A8D /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613FEF122B0FC5F600828A8D /* CountdownView.swift */; };
 		61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933D2B037ABF0049A024 /* BitTrustApp.swift */; };
 		61AA93402B037ABF0049A024 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933F2B037ABF0049A024 /* MainView.swift */; };
 		61AA93422B037AC00049A024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AA93412B037AC00049A024 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		61323C072B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGasHistoryViewModel.swift; sourceTree = "<group>"; };
 		61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTimestampItem.swift; sourceTree = "<group>"; };
 		61323C0E2B0E12CE00D5BB47 /* QuoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItem.swift; sourceTree = "<group>"; };
+		613FEF102B0FB0CD00828A8D /* AlarmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmsView.swift; path = ../../../../AlarmsView.swift; sourceTree = "<group>"; };
+		613FEF122B0FC5F600828A8D /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		61AA933A2B037ABF0049A024 /* BitTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AA933D2B037ABF0049A024 /* BitTrustApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTrustApp.swift; sourceTree = "<group>"; };
 		61AA933F2B037ABF0049A024 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -148,6 +152,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		613FEF0F2B0FB0AC00828A8D /* Alarms */ = {
+			isa = PBXGroup;
+			children = (
+				613FEF102B0FB0CD00828A8D /* AlarmsView.swift */,
+			);
+			path = Alarms;
+			sourceTree = "<group>";
+		};
 		61AA93312B037ABF0049A024 = {
 			isa = PBXGroup;
 			children = (
@@ -201,8 +213,8 @@
 		61AA934C2B037B020049A024 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				613FEF0F2B0FB0AC00828A8D /* Alarms */,
 				61AA938A2B03F7530049A024 /* Quotes */,
-				61AA93892B03F7390049A024 /* Alarms */,
 				61AA93882B03F72B0049A024 /* Settings */,
 				61AA93832B03BEE50049A024 /* TabBar */,
 				61AA93502B037B490049A024 /* NewsFeed */,
@@ -216,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				61AA93922B04CAF70049A024 /* Safari */,
-				61AA93592B037C120049A024 /* MetamaskSDK */,
 				61AA93582B037C080049A024 /* GetNewsItems */,
 				61AA939F2B0612400049A024 /* GetQuotes */,
 				61AA93572B037BFD0049A024 /* GetGasInfo */,
@@ -260,18 +271,12 @@
 			path = GetNewsItems;
 			sourceTree = "<group>";
 		};
-		61AA93592B037C120049A024 /* MetamaskSDK */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MetamaskSDK;
-			sourceTree = "<group>";
-		};
 		61AA935A2B037C340049A024 /* GasViews */ = {
 			isa = PBXGroup;
 			children = (
 				61AA934E2B037B270049A024 /* GasItems */,
 				61AA93622B03B4140049A024 /* MainGasView.swift */,
+				613FEF122B0FC5F600828A8D /* CountdownView.swift */,
 			);
 			path = GasViews;
 			sourceTree = "<group>";
@@ -299,13 +304,6 @@
 				61AA93DA2B078D830049A024 /* SettingsView.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		61AA93892B03F7390049A024 /* Alarms */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Alarms;
 			sourceTree = "<group>";
 		};
 		61AA938A2B03F7530049A024 /* Quotes */ = {
@@ -412,12 +410,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				613FEF132B0FC5F600828A8D /* CountdownView.swift in Sources */,
 				61AA935E2B0383450049A024 /* GasRectItem.swift in Sources */,
 				61AA93872B03E0AB0049A024 /* CoinItem.swift in Sources */,
 				61AA935C2B037CA30049A024 /* GasSquareItem.swift in Sources */,
 				61AA93A12B0612720049A024 /* RequestQuotesViewModel.swift in Sources */,
 				61AA93852B03BF040049A024 /* TabBarItem.swift in Sources */,
 				61323C0A2B0CC31300D5BB47 /* GasTimestampItem.swift in Sources */,
+				613FEF112B0FB0CD00828A8D /* AlarmsView.swift in Sources */,
 				61AA93402B037ABF0049A024 /* MainView.swift in Sources */,
 				61AA93652B03B95D0049A024 /* RequestGasInfoViewModel.swift in Sources */,
 				61323BFD2B0B4D7F00D5BB47 /* GithubProjectView.swift in Sources */,

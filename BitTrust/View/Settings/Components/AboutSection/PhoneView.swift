@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PhoneView: View {
     
-    var phoneNumber = "+37368635063"
+    private let phoneNumber = "+37368635063"
     
     var body: some View {
         HStack {

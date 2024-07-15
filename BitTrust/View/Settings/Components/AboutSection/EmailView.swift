@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmailView: View {
     
-    var emailAddress = "artemporcesku@gmail.com"
+    private let emailAddress = "artemporcesku@gmail.com"
     
     var body: some View {
         HStack {

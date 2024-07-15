@@ -10,8 +10,11 @@ import SwiftUICharts
 
 struct MainGasView: View {
     
-    @StateObject var gasLevelsViewModel = RequestGasInfoViewModel()
-    @StateObject var gasHistoryViewModel = RequestGasHistoryViewModel()
+    @StateObject private var gasLevelsViewModel = RequestGasInfoViewModel()
+    @StateObject private var gasHistoryViewModel = RequestGasHistoryViewModel()
+    
+    private var timer: Timer?
+    
     private let chartStyle = ChartStyle(backgroundColor: Color.white, accentColor: Color(GasLevel.low.rawValue), gradientColor: GradientColor.init(start: Color.mint, end: Color(GasLevel.low.rawValue)), textColor: Color.black, legendTextColor: Color(GasLevel.low.rawValue), dropShadowColor: Color.white)
     
     var chartData: [(String, Double)] {
@@ -33,7 +36,15 @@ struct MainGasView: View {
             GasRectItem(gasLevel: .low, gwei: gasLevelsViewModel.lowGas)
             
             BarChartView(data: ChartData(values: chartData), title: "Gas History - Gwei",style: chartStyle, form: ChartForm.extraLarge, dropShadow: false, cornerImage: Image(systemName: "fuelpump.circle.fill"), valueSpecifier: "%.0f Gwei")
+        }.onAppear {
+            gasLevelsViewModel.startFetchingGas()
+            gasHistoryViewModel.startFetchingGas()
         }
+        .onDisappear {
+            gasLevelsViewModel.stopFetchingGas()
+            gasHistoryViewModel.stopFetchingGas()
+        }
+        
     }
 }
 

@@ -15,11 +15,18 @@ open class RequestGasInfoViewModel: ObservableObject {
     
     private var timer: Timer?
     
-    init() {
+    func startFetchingGas() {
         fetchGas()
         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
+            print("Fetched gas")
             self?.fetchGas()
         }
+    }
+    
+    func stopFetchingGas() {
+        print("Stopped fetching gas")
+        timer?.invalidate()
+        timer = nil
     }
     
     func fetchGas() {
@@ -37,9 +44,7 @@ open class RequestGasInfoViewModel: ObservableObject {
             }
             
             guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
-            //print("Gas json object: \(json)")
             guard let result = json["result"] as? [String: Any] else { return }
-            //print("Reuslt gas: \(result)")
             
             DispatchQueue.main.async {
                 self.lowGas = result["SafeGasPrice"] as! String
@@ -50,7 +55,4 @@ open class RequestGasInfoViewModel: ObservableObject {
         }.resume()
     }
     
-    deinit {
-        timer?.invalidate()
-    }
 }

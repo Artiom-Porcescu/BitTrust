@@ -11,7 +11,6 @@ final class RequestNewsItemViewModel: ObservableObject {
     
     @Published var news: [NewsItem] = []
     
-    
     private var timer: Timer?
     
     init() {
@@ -65,5 +64,6 @@ final class RequestNewsItemViewModel: ObservableObject {
     
     deinit {
         timer?.invalidate()
+        print("News objects deinit")
     }
 }

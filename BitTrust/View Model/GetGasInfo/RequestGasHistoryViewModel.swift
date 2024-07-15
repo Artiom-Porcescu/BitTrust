@@ -10,15 +10,21 @@ import Foundation
 final class RequestGasHistoryViewModel: ObservableObject {
     
     @Published var gasHistory: [GasTimestampItem] = []
-    
-    private var timer: Timer?
+
     private let minutesToFetch = 10
     
-    init() {
+    private var timer: Timer?
+    
+    func startFetchingGas() {
         fetchGasHistory()
-        timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(60 * minutesToFetch), repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: TimeInterval((60 * minutesToFetch)), repeats: true) { [weak self] _ in
             self?.fetchGasHistory()
         }
+    }
+    
+    func stopFetchingGas() {
+        timer?.invalidate()
+        timer = nil
     }
     
     func fetchGasHistory() {
@@ -26,6 +32,7 @@ final class RequestGasHistoryViewModel: ObservableObject {
         gasHistory = []
         
         let urlString = "https://api.owlracle.info/v4/eth/history?apikey=c6088ad5a83a406f90b4e44b8a19e414&timeframe=10"
+        
         guard let url = URL(string: urlString) else {
             print("Error while setting URL string")
             return
@@ -38,10 +45,9 @@ final class RequestGasHistoryViewModel: ObservableObject {
                 return
             }
             
-            
             guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
             guard let res = json["candles"] as? [[String: Any]] else { return }
-//            print("Gas history json object: \(json)\n\n\n\n")
+            
             for time in res {
                 if self.gasHistory.count >= 40 {
                     break
@@ -60,11 +66,6 @@ final class RequestGasHistoryViewModel: ObservableObject {
                             preFormattedDateString += String(n)
                         }
                     }
-                    
-//                    print("PreFormatted string: \(preFormattedDateString)")
-//                    print("Gas Price: \(gasPrice)")
-//                    print("Timestamp Object: \(timeUnwrapped)\n\n\n\n")
-                    
 
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -85,9 +86,5 @@ final class RequestGasHistoryViewModel: ObservableObject {
             }
             
         }.resume()
-    }
-    
-    deinit {
-        timer?.invalidate()
     }
 }

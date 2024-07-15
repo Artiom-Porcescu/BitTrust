@@ -24,20 +24,6 @@ struct MainView: View {
                     Text("News")
                 }
             
-            // Quotes tab
-            SearchBarView()
-                .tabItem {
-                    Image(systemName: "chart.bar.xaxis")
-                    Text("Quotes")
-                }
-            
-            // Alarms tab
-            AlarmsView()
-                .tabItem {
-                    Image(systemName: "bell")
-                    Text("Alarms")
-                }
-            
             // Settings tab
             SettingsView()
                 .tabItem {

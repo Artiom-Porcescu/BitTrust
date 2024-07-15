@@ -14,13 +14,16 @@
 		61323BFF2B0B4DCB00D5BB47 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323BFE2B0B4DCB00D5BB47 /* ShareView.swift */; };
 		61323C012B0B4E6D00D5BB47 /* AppVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C002B0B4E6D00D5BB47 /* AppVersionView.swift */; };
 		61323C032B0B4ED100D5BB47 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C022B0B4ED100D5BB47 /* AddressView.swift */; };
-		61323C062B0B6E1C00D5BB47 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C052B0B6E1C00D5BB47 /* TextFieldView.swift */; };
 		61323C082B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C072B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift */; };
 		61323C0A2B0CC31300D5BB47 /* GasTimestampItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */; };
 		61323C0D2B0CCF5D00D5BB47 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 61323C0C2B0CCF5D00D5BB47 /* SwiftUICharts */; };
-		61323C0F2B0E12CE00D5BB47 /* QuoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61323C0E2B0E12CE00D5BB47 /* QuoteItem.swift */; };
-		613FEF112B0FB0CD00828A8D /* AlarmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613FEF102B0FB0CD00828A8D /* AlarmsView.swift */; };
-		613FEF132B0FC5F600828A8D /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613FEF122B0FC5F600828A8D /* CountdownView.swift */; };
+		613FEF1A2B12311F00828A8D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613FEF192B12311F00828A8D /* WidgetKit.framework */; };
+		613FEF1B2B12311F00828A8D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61AA936E2B03BA020049A024 /* SwiftUI.framework */; };
+		613FEF1E2B12311F00828A8D /* GasWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613FEF1D2B12311F00828A8D /* GasWidgetBundle.swift */; };
+		613FEF202B12311F00828A8D /* GasWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613FEF1F2B12311F00828A8D /* GasWidget.swift */; };
+		613FEF222B12312100828A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 613FEF212B12312100828A8D /* Assets.xcassets */; };
+		613FEF262B12312100828A8D /* GasWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 613FEF182B12311F00828A8D /* GasWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		613FEF2C2B12418D00828A8D /* RequestGasInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93642B03B95D0049A024 /* RequestGasInfoViewModel.swift */; };
 		61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933D2B037ABF0049A024 /* BitTrustApp.swift */; };
 		61AA93402B037ABF0049A024 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA933F2B037ABF0049A024 /* MainView.swift */; };
 		61AA93422B037AC00049A024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AA93412B037AC00049A024 /* Assets.xcassets */; };
@@ -33,18 +36,23 @@
 		61AA93632B03B4140049A024 /* MainGasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93622B03B4140049A024 /* MainGasView.swift */; };
 		61AA93652B03B95D0049A024 /* RequestGasInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93642B03B95D0049A024 /* RequestGasInfoViewModel.swift */; };
 		61AA93852B03BF040049A024 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93842B03BF040049A024 /* TabBarItem.swift */; };
-		61AA93872B03E0AB0049A024 /* CoinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93862B03E0AB0049A024 /* CoinItem.swift */; };
 		61AA938C2B03F9980049A024 /* RequestNewsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA938B2B03F9980049A024 /* RequestNewsItemViewModel.swift */; };
 		61AA938E2B03FA880049A024 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA938D2B03FA880049A024 /* NewsView.swift */; };
 		61AA93912B04C43D0049A024 /* Marquee in Frameworks */ = {isa = PBXBuildFile; productRef = 61AA93902B04C43D0049A024 /* Marquee */; };
 		61AA93942B04CB040049A024 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93932B04CB040049A024 /* SafariView.swift */; };
-		61AA939A2B0533FB0049A024 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93992B0533FB0049A024 /* SearchBarView.swift */; };
-		61AA939C2B0534160049A024 /* QuoteResultRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA939B2B0534160049A024 /* QuoteResultRectView.swift */; };
-		61AA939E2B053DCA0049A024 /* EmptyQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA939D2B053DCA0049A024 /* EmptyQuotesView.swift */; };
-		61AA93A12B0612720049A024 /* RequestQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93A02B0612720049A024 /* RequestQuotesViewModel.swift */; };
 		61AA93D92B06713D0049A024 /* TapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93D82B06713D0049A024 /* TapticFeedback.swift */; };
 		61AA93DB2B078D830049A024 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA93DA2B078D830049A024 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		613FEF242B12312100828A8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61AA93322B037ABF0049A024 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 613FEF172B12311F00828A8D;
+			remoteInfo = GasWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		61AA93822B03BA030049A024 /* Embed Foundation Extensions */ = {
@@ -53,6 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				613FEF262B12312100828A8D /* GasWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,12 +76,14 @@
 		61323BFE2B0B4DCB00D5BB47 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		61323C002B0B4E6D00D5BB47 /* AppVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionView.swift; sourceTree = "<group>"; };
 		61323C022B0B4ED100D5BB47 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
-		61323C052B0B6E1C00D5BB47 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		61323C072B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGasHistoryViewModel.swift; sourceTree = "<group>"; };
 		61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTimestampItem.swift; sourceTree = "<group>"; };
-		61323C0E2B0E12CE00D5BB47 /* QuoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItem.swift; sourceTree = "<group>"; };
-		613FEF102B0FB0CD00828A8D /* AlarmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmsView.swift; path = ../../../../AlarmsView.swift; sourceTree = "<group>"; };
-		613FEF122B0FC5F600828A8D /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		613FEF182B12311F00828A8D /* GasWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GasWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		613FEF192B12311F00828A8D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		613FEF1D2B12311F00828A8D /* GasWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasWidgetBundle.swift; sourceTree = "<group>"; };
+		613FEF1F2B12311F00828A8D /* GasWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasWidget.swift; sourceTree = "<group>"; };
+		613FEF212B12312100828A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		613FEF232B12312100828A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AA933A2B037ABF0049A024 /* BitTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AA933D2B037ABF0049A024 /* BitTrustApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTrustApp.swift; sourceTree = "<group>"; };
 		61AA933F2B037ABF0049A024 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -87,19 +98,23 @@
 		61AA93642B03B95D0049A024 /* RequestGasInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGasInfoViewModel.swift; sourceTree = "<group>"; };
 		61AA936E2B03BA020049A024 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		61AA93842B03BF040049A024 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		61AA93862B03E0AB0049A024 /* CoinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItem.swift; sourceTree = "<group>"; };
 		61AA938B2B03F9980049A024 /* RequestNewsItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNewsItemViewModel.swift; sourceTree = "<group>"; };
 		61AA938D2B03FA880049A024 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		61AA93932B04CB040049A024 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		61AA93992B0533FB0049A024 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
-		61AA939B2B0534160049A024 /* QuoteResultRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResultRectView.swift; sourceTree = "<group>"; };
-		61AA939D2B053DCA0049A024 /* EmptyQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyQuotesView.swift; sourceTree = "<group>"; };
-		61AA93A02B0612720049A024 /* RequestQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestQuotesViewModel.swift; sourceTree = "<group>"; };
 		61AA93D82B06713D0049A024 /* TapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticFeedback.swift; sourceTree = "<group>"; };
 		61AA93DA2B078D830049A024 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		613FEF152B12311F00828A8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				613FEF1B2B12311F00828A8D /* SwiftUI.framework in Frameworks */,
+				613FEF1A2B12311F00828A8D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		61AA93372B037ABF0049A024 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,28 +157,22 @@
 			path = AboutSection;
 			sourceTree = "<group>";
 		};
-		61323C042B0B6E0800D5BB47 /* Components */ = {
+		613FEF1C2B12311F00828A8D /* GasWidget */ = {
 			isa = PBXGroup;
 			children = (
-				61AA939D2B053DCA0049A024 /* EmptyQuotesView.swift */,
-				61323C052B0B6E1C00D5BB47 /* TextFieldView.swift */,
-				61AA939B2B0534160049A024 /* QuoteResultRectView.swift */,
+				613FEF1D2B12311F00828A8D /* GasWidgetBundle.swift */,
+				613FEF1F2B12311F00828A8D /* GasWidget.swift */,
+				613FEF212B12312100828A8D /* Assets.xcassets */,
+				613FEF232B12312100828A8D /* Info.plist */,
 			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		613FEF0F2B0FB0AC00828A8D /* Alarms */ = {
-			isa = PBXGroup;
-			children = (
-				613FEF102B0FB0CD00828A8D /* AlarmsView.swift */,
-			);
-			path = Alarms;
+			path = GasWidget;
 			sourceTree = "<group>";
 		};
 		61AA93312B037ABF0049A024 = {
 			isa = PBXGroup;
 			children = (
 				61AA933C2B037ABF0049A024 /* BitTrust */,
+				613FEF1C2B12311F00828A8D /* GasWidget */,
 				61AA936B2B03BA020049A024 /* Frameworks */,
 				61AA933B2B037ABF0049A024 /* Products */,
 			);
@@ -173,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				61AA933A2B037ABF0049A024 /* BitTrust.app */,
+				613FEF182B12311F00828A8D /* GasWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,9 +213,7 @@
 			children = (
 				61AA93532B037BDE0049A024 /* NewsItem.swift */,
 				61AA93552B037BEF0049A024 /* GasItem.swift */,
-				61AA93862B03E0AB0049A024 /* CoinItem.swift */,
 				61323C092B0CC31300D5BB47 /* GasTimestampItem.swift */,
-				61323C0E2B0E12CE00D5BB47 /* QuoteItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,8 +221,6 @@
 		61AA934C2B037B020049A024 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				613FEF0F2B0FB0AC00828A8D /* Alarms */,
-				61AA938A2B03F7530049A024 /* Quotes */,
 				61AA93882B03F72B0049A024 /* Settings */,
 				61AA93832B03BEE50049A024 /* TabBar */,
 				61AA93502B037B490049A024 /* NewsFeed */,
@@ -229,7 +235,6 @@
 			children = (
 				61AA93922B04CAF70049A024 /* Safari */,
 				61AA93582B037C080049A024 /* GetNewsItems */,
-				61AA939F2B0612400049A024 /* GetQuotes */,
 				61AA93572B037BFD0049A024 /* GetGasInfo */,
 				61AA93D82B06713D0049A024 /* TapticFeedback.swift */,
 			);
@@ -276,7 +281,6 @@
 			children = (
 				61AA934E2B037B270049A024 /* GasItems */,
 				61AA93622B03B4140049A024 /* MainGasView.swift */,
-				613FEF122B0FC5F600828A8D /* CountdownView.swift */,
 			);
 			path = GasViews;
 			sourceTree = "<group>";
@@ -285,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				61AA936E2B03BA020049A024 /* SwiftUI.framework */,
+				613FEF192B12311F00828A8D /* WidgetKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -306,15 +311,6 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		61AA938A2B03F7530049A024 /* Quotes */ = {
-			isa = PBXGroup;
-			children = (
-				61323C042B0B6E0800D5BB47 /* Components */,
-				61AA93992B0533FB0049A024 /* SearchBarView.swift */,
-			);
-			path = Quotes;
-			sourceTree = "<group>";
-		};
 		61AA93922B04CAF70049A024 /* Safari */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,17 +319,26 @@
 			path = Safari;
 			sourceTree = "<group>";
 		};
-		61AA939F2B0612400049A024 /* GetQuotes */ = {
-			isa = PBXGroup;
-			children = (
-				61AA93A02B0612720049A024 /* RequestQuotesViewModel.swift */,
-			);
-			path = GetQuotes;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		613FEF172B12311F00828A8D /* GasWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 613FEF272B12312100828A8D /* Build configuration list for PBXNativeTarget "GasWidgetExtension" */;
+			buildPhases = (
+				613FEF142B12311F00828A8D /* Sources */,
+				613FEF152B12311F00828A8D /* Frameworks */,
+				613FEF162B12311F00828A8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GasWidgetExtension;
+			productName = GasWidgetExtension;
+			productReference = 613FEF182B12311F00828A8D /* GasWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		61AA93392B037ABF0049A024 /* BitTrust */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61AA93482B037AC00049A024 /* Build configuration list for PBXNativeTarget "BitTrust" */;
@@ -346,6 +351,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				613FEF252B12312100828A8D /* PBXTargetDependency */,
 			);
 			name = BitTrust;
 			packageProductDependencies = (
@@ -366,6 +372,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					613FEF172B12311F00828A8D = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					61AA93392B037ABF0049A024 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -389,11 +398,20 @@
 			projectRoot = "";
 			targets = (
 				61AA93392B037ABF0049A024 /* BitTrust */,
+				613FEF172B12311F00828A8D /* GasWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		613FEF162B12311F00828A8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				613FEF222B12312100828A8D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		61AA93382B037ABF0049A024 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,18 +424,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		613FEF142B12311F00828A8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				613FEF1E2B12311F00828A8D /* GasWidgetBundle.swift in Sources */,
+				613FEF202B12311F00828A8D /* GasWidget.swift in Sources */,
+				613FEF2C2B12418D00828A8D /* RequestGasInfoViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		61AA93362B037ABF0049A024 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				613FEF132B0FC5F600828A8D /* CountdownView.swift in Sources */,
 				61AA935E2B0383450049A024 /* GasRectItem.swift in Sources */,
-				61AA93872B03E0AB0049A024 /* CoinItem.swift in Sources */,
 				61AA935C2B037CA30049A024 /* GasSquareItem.swift in Sources */,
-				61AA93A12B0612720049A024 /* RequestQuotesViewModel.swift in Sources */,
 				61AA93852B03BF040049A024 /* TabBarItem.swift in Sources */,
 				61323C0A2B0CC31300D5BB47 /* GasTimestampItem.swift in Sources */,
-				613FEF112B0FB0CD00828A8D /* AlarmsView.swift in Sources */,
 				61AA93402B037ABF0049A024 /* MainView.swift in Sources */,
 				61AA93652B03B95D0049A024 /* RequestGasInfoViewModel.swift in Sources */,
 				61323BFD2B0B4D7F00D5BB47 /* GithubProjectView.swift in Sources */,
@@ -427,19 +451,14 @@
 				61AA938E2B03FA880049A024 /* NewsView.swift in Sources */,
 				61AA93542B037BDE0049A024 /* NewsItem.swift in Sources */,
 				61AA93D92B06713D0049A024 /* TapticFeedback.swift in Sources */,
-				61AA939C2B0534160049A024 /* QuoteResultRectView.swift in Sources */,
 				61323C012B0B4E6D00D5BB47 /* AppVersionView.swift in Sources */,
-				61AA939E2B053DCA0049A024 /* EmptyQuotesView.swift in Sources */,
-				61AA939A2B0533FB0049A024 /* SearchBarView.swift in Sources */,
 				61AA93562B037BEF0049A024 /* GasItem.swift in Sources */,
 				61323BF72B0B4C5E00D5BB47 /* EmailView.swift in Sources */,
 				61AA93602B038F910049A024 /* NewsRow.swift in Sources */,
 				61323BFF2B0B4DCB00D5BB47 /* ShareView.swift in Sources */,
-				61323C062B0B6E1C00D5BB47 /* TextFieldView.swift in Sources */,
 				61323C082B0CA8FC00D5BB47 /* RequestGasHistoryViewModel.swift in Sources */,
 				61AA933E2B037ABF0049A024 /* BitTrustApp.swift in Sources */,
 				61323C032B0B4ED100D5BB47 /* AddressView.swift in Sources */,
-				61323C0F2B0E12CE00D5BB47 /* QuoteItem.swift in Sources */,
 				61323BFB2B0B4D0B00D5BB47 /* GithubAccountView.swift in Sources */,
 				61AA93632B03B4140049A024 /* MainGasView.swift in Sources */,
 				61323BF92B0B4CBB00D5BB47 /* PhoneView.swift in Sources */,
@@ -448,7 +467,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		613FEF252B12312100828A8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 613FEF172B12311F00828A8D /* GasWidgetExtension */;
+			targetProxy = 613FEF242B12312100828A8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		613FEF282B12312100828A8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PWD28R24HG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GasWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GasWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Artiom-Porcescu.BitTrust.GasWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		613FEF292B12312100828A8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PWD28R24HG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GasWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GasWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Artiom-Porcescu.BitTrust.GasWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		61AA93462B037AC00049A024 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,6 +652,7 @@
 		61AA93492B037AC00049A024 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -603,6 +685,7 @@
 		61AA934A2B037AC00049A024 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -635,6 +718,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		613FEF272B12312100828A8D /* Build configuration list for PBXNativeTarget "GasWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				613FEF282B12312100828A8D /* Debug */,
+				613FEF292B12312100828A8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		61AA93352B037ABF0049A024 /* Build configuration list for PBXProject "BitTrust" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

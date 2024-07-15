@@ -24,7 +24,6 @@ struct MainGasView: View {
     
     var body: some View {
         VStack {
-            CountdownView()
             HStack() {
                 GasSquareItem(color: .high, gwei: gasLevelsViewModel.highGas)
                 Spacer()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RequestGasInfoViewModel: ObservableObject {
+open class RequestGasInfoViewModel: ObservableObject {
     
     @Published var lowGas = ""
     @Published var averageGas = ""

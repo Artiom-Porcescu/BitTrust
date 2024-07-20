@@ -6,21 +6,19 @@
 //
 
 import Foundation
-import SwiftUI
 
-enum GasLevel: String {
-    case low = "Low"
-    case average = "Average"
-    case high = "High"
-    
-    var color: Color {
-        switch self{
-        case .low:
-            return Color("Low")
-        case .average:
-            return Color("Average")
-        case .high:
-            return Color("High")
-        }
+// MARK: - Coin
+struct GasItem: Codable {
+    let result: Result2
+}
+
+// MARK: - Result
+struct Result2: Codable {
+    let safeGasPrice, proposeGasPrice, fastGasPrice: String?
+
+    enum CodingKeys: String, CodingKey {
+        case safeGasPrice = "SafeGasPrice"
+        case proposeGasPrice = "ProposeGasPrice"
+        case fastGasPrice = "FastGasPrice"
     }
 }

@@ -10,12 +10,12 @@ import SwiftUICharts
 
 struct MainGasView: View {
     
-    @StateObject private var gasLevelsViewModel = RequestGasInfoViewModel()
+    @StateObject private var gasLevelsViewModel = GasInfoViewModel(service: CryptoDataService())
     @StateObject private var gasHistoryViewModel = RequestGasHistoryViewModel()
     
     private var timer: Timer?
     
-    private let chartStyle = ChartStyle(backgroundColor: Color.white, accentColor: Color(GasLevel.low.rawValue), gradientColor: GradientColor.init(start: Color.mint, end: Color(GasLevel.low.rawValue)), textColor: Color.black, legendTextColor: Color(GasLevel.low.rawValue), dropShadowColor: Color.white)
+    private let chartStyle = ChartStyle(backgroundColor: Color.white, accentColor: Color(.systemMint), gradientColor: GradientColor.init(start: Color.mint, end: Color(.systemMint)), textColor: Color.black, legendTextColor: Color(.systemMint), dropShadowColor: Color.white)
     
     var chartData: [(String, Double)] {
         var data: [(String, Double)] = []
@@ -27,21 +27,21 @@ struct MainGasView: View {
     
     var body: some View {
         VStack {
-            HStack() {
-                GasSquareItem(color: .high, gwei: gasLevelsViewModel.highGas)
-                Spacer()
-                GasSquareItem(color: .average, gwei: gasLevelsViewModel.averageGas)
+            if let gwei = gasLevelsViewModel.gasItem {
+                HStack() {
+                    GasSquareItem(color: .red, gwei: gwei.result.fastGasPrice ?? "", type: "High")
+                    Spacer()
+                    GasSquareItem(color: .yellow, gwei: gwei.result.proposeGasPrice ?? "", type: "Average")
+                }
+                .padding()
+                GasRectItem(color: .mint, gwei: gwei.result.safeGasPrice ?? "", type: "Low")
             }
-            .padding()
-            GasRectItem(gasLevel: .low, gwei: gasLevelsViewModel.lowGas)
-            
             BarChartView(data: ChartData(values: chartData), title: "Gas History - Gwei",style: chartStyle, form: ChartForm.extraLarge, dropShadow: false, cornerImage: Image(systemName: "fuelpump.circle.fill"), valueSpecifier: "%.0f Gwei")
         }.onAppear {
-            gasLevelsViewModel.startFetchingGas()
+            Task { await gasLevelsViewModel.fetchCoinDetails() }
             gasHistoryViewModel.startFetchingGas()
         }
         .onDisappear {
-            gasLevelsViewModel.stopFetchingGas()
             gasHistoryViewModel.stopFetchingGas()
         }
         

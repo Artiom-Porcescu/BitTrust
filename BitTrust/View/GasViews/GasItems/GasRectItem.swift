@@ -9,29 +9,30 @@ import SwiftUI
 
 struct GasRectItem: View {
     
-    var gasLevel: GasLevel
-    var gwei: String
+    let color: Color
+    let gwei: String
+    let type: String
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                .fill(Color(gasLevel.rawValue))
-                    .frame(height: 150)
-                    .overlay {
-                        VStack {
-                            Text("\(gwei) GWEI")
-                                .padding()
-                            Text(gasLevel.rawValue)
-                        }
-                        .font(.custom("Menlo", size: 20))
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
+                .fill(color)
+                .frame(height: 150)
+                .overlay {
+                    VStack {
+                        Text("\(gwei) GWEI")
+                            .padding()
+                        Text(type)
                     }
-                    .padding()
+                    .font(.custom("Menlo", size: 20))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                }
+                .padding()
         }
     }
 }
 
 #Preview {
-    GasRectItem(gasLevel: .low, gwei: "35")
+    GasRectItem(color: .low, gwei: "35", type: "High")
 }

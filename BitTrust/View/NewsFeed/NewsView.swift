@@ -9,43 +9,42 @@ import SwiftUI
 
 struct NewsView: View {
     
-    @StateObject var viewModel = RequestNewsItemViewModel()
+    @StateObject private var viewModel = NewsViewModel(service: CryptoDataService())
     @State private var isShowingSafariView = false
-    @State private var selectedIndex: Int? 
+    @State private var selectedIndex: Int?
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.news.indices, id: \.self) { index in
-                    NewsRow(newsTitle: viewModel.news[index].title, currencies: viewModel.news[index].currencies).onTapGesture {
-                            TapticFeedback.triggerHapticFeedback()
-                            self.selectedIndex = index
-                            self.isShowingSafariView = true
-                        }
-                    .contextMenu(ContextMenu(menuItems: {
-                        ShareLink(item: "\(viewModel.news[index].newsURL)")
-                    }))
+                if let news = viewModel.news {
+                    ForEach(news.results.indices, id: \.self) { index in
+                        NewsRow(newsTitle: news.results[index].title, currencies: news.results[index].currencies ?? [])
+                            .onTapGesture {
+                                TapticFeedback.triggerHapticFeedback()
+                                self.selectedIndex = index
+                                self.isShowingSafariView = true
+                            }
+                            .contextMenu {
+                                ShareLink(item: news.results[index].url)
+                            }
+                    }
                 }
             }
             .refreshable {
-                viewModel.fetchNews()
                 TapticFeedback.triggerHapticFeedback()
             }
             .listStyle(PlainListStyle())
             .navigationBarTitle("News", displayMode: .large)
             .fullScreenCover(isPresented: $isShowingSafariView) {
-                if let selectedIndex = selectedIndex, viewModel.news.indices.contains(selectedIndex) {
-                    SafariView(url: URL(string: viewModel.news[selectedIndex].newsURL) ?? URL(string: "https://cryptopanic.com/")!)
+                if let selectedIndex = selectedIndex, let news = viewModel.news, news.results.indices.contains(selectedIndex) {
+                    SafariView(url: URL(string: news.results[selectedIndex].url) ?? URL(string: "https://cryptopanic.com/")!)
                 } else {
-                    // Handle the error or show a default URL
                     SafariView(url: URL(string: "https://cryptopanic.com/")!)
                 }
             }
+            .onAppear {
+                Task { await viewModel.fetchCoinDetails() }
+            }
         }
     }
-}
-
-
-#Preview {
-    NewsView()
 }

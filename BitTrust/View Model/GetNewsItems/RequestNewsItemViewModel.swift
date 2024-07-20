@@ -24,6 +24,7 @@ final class RequestNewsItemViewModel: ObservableObject {
         
         news = []
         
+        // MARK: I know that API keys should not be stored openly like that, it's just fro testing it
         let urlString = "https://cryptopanic.com/api/v1/posts/?auth_token=b47ebdd1b4464aa269f2c28991aa959038486c8e"
         guard let url = URL(string: urlString) else {
             print("Error while setting URL string")
@@ -52,10 +53,7 @@ final class RequestNewsItemViewModel: ObservableObject {
                                     currencies.append(currencyCode)
                                 }
                             }
-                        } 
-                        
-                        
-                        self.news.append(NewsItem(title: title, newsURL: newsURL, currencies: currencies))
+                        }
                     }
                 }
             }

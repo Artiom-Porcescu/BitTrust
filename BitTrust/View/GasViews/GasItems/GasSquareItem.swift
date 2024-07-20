@@ -9,24 +9,25 @@ import SwiftUI
 
 struct GasSquareItem: View {
     
-    var color: GasLevel
-    var gwei: String
+    let color: Color
+    let gwei: String
+    let type: String
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                .fill(Color(color.rawValue))
-                    .frame(width: 150, height: 150)
-                    .overlay {
-                        VStack {
-                            Text("\(gwei) GWEI")
-                                .padding()
-                            Text(color.rawValue)
-                        }
-                        .font(.custom("Menlo", size: 20))
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
+                .fill(color)
+                .frame(width: 150, height: 150)
+                .overlay {
+                    VStack {
+                        Text("\(gwei) GWEI")
+                            .padding()
+                        Text(type)
                     }
+                    .font(.custom("Menlo", size: 20))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                }
                     
         }
         
@@ -34,5 +35,5 @@ struct GasSquareItem: View {
 }
 
 #Preview {
-    GasSquareItem(color: .low, gwei: "35")
+    GasSquareItem(color: .low, gwei: "35", type: "Low")
 }

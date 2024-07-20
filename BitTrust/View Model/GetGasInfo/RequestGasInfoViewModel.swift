@@ -28,7 +28,7 @@ open class RequestGasInfoViewModel: ObservableObject {
         timer?.invalidate()
         timer = nil
     }
-    
+    // MARK: I know that API keys should not be stored openly like that, it's just fro testing it
     func fetchGas() {
         let urlString = "https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=DFV7AYR336P9BN9DQ5IGCDAH1JB66S9AVW"
         guard let url = URL(string: urlString) else {

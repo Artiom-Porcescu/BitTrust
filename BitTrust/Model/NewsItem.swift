@@ -7,8 +7,22 @@
 
 import Foundation
 
-struct NewsItem {
-    var title: String
-    var newsURL: String
-    var currencies: [String]
+struct NewsItem: Codable, Identifiable {
+    let id = UUID()
+    let results: [Result]
+}
+
+struct Result: Codable, Hashable {
+    let title: String
+    let currencies: [Currency]?
+    let url: String
+
+    enum CodingKeys: String, CodingKey {
+        case title, currencies, url
+    }
+}
+
+// MARK: - Currency
+struct Currency: Codable, Hashable {
+    let code: String
 }

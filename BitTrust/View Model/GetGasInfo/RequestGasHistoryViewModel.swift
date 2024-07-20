@@ -30,7 +30,7 @@ final class RequestGasHistoryViewModel: ObservableObject {
     func fetchGasHistory() {
         
         gasHistory = []
-        
+        // MARK: I know that API keys should not be stored openly like that, it's just fro testing it
         let urlString = "https://api.owlracle.info/v4/eth/history?apikey=c6088ad5a83a406f90b4e44b8a19e414&timeframe=10"
         
         guard let url = URL(string: urlString) else {

@@ -18,7 +18,7 @@ struct TabBarItem: View {
             VStack {
                 Image(systemName: "house.fill").symbolEffect(.bounce, value: animate).font(.title)
                 Text("Toggle").font(.system(size: 13))
-            }.foregroundColor(Color(GasLevel.low.rawValue))
+            }.foregroundColor(.mint)
         }
     }
 }

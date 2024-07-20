@@ -30,7 +30,7 @@ struct MainView: View {
                     Image(systemName: "gearshape.fill")
                     Text("Settings")
                 }
-        }.tint(GasLevel.low.color)
+        }.tint(.mint)
         
     }
 }
@@ -38,3 +38,4 @@ struct MainView: View {
 #Preview {
     MainView()
 }
+

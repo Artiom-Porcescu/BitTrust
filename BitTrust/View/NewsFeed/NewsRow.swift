@@ -10,13 +10,13 @@ import SwiftUI
 struct NewsRow: View {
     
     var newsTitle: String
-    var currencies: [String]
+    var currencies: [Currency]
     @State private var animate = false
     
     var currenciesString: String {
         var res = "Currencies:"
         for currency in currencies {
-            res += " \(currency) "
+            res += " \(currency.code) "
         }
         return res
     }
@@ -42,8 +42,4 @@ struct NewsRow: View {
         }
         
     }
-}
-
-#Preview {
-    NewsRow(newsTitle: "New Title", currencies: ["BTC", "ETH"])
 }
